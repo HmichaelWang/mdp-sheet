@@ -1,0 +1,14 @@
+<div #parentDiv class="backdrop" tappable (click)="close('',$event)">
+  <div #hearder class="header" *ngIf="showContent&&config.addHearder" [@slideAnimation]="showAnimate" (click)="stop($event)">
+    <ion-row>
+      <ion-col text-left align-self-center>{{config.title}}</ion-col>
+      <ion-col col-1 align-self-center text-right tappable (click)="close('',$event)">
+        <ion-icon name="ios-close"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="template" *ngIf="showContent" [@slideAnimation]="showAnimate" (click)="stop($event)">
+    <ng-content></ng-content>
+  </div>
+
+</div>
