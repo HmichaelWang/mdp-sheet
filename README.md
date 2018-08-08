@@ -40,10 +40,10 @@ test页面初始化使用
 test.ts文件
 ```typescript
   let popDetail = this.popoverCtrl.create('SheetDetailPage', { }, { cssClass: 'custom-popover' });
-      popDetail.present();
-      popDetail.onDidDismiss(res => {
-        ...
-      })
+  popDetail.present();
+  popDetail.onDidDismiss(res => {
+    ...
+  })
 ```
 
 sheet-detail.html文件
